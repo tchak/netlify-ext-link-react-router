@@ -1,6 +1,6 @@
 import type { LinksFunction, LoaderFunction } from "remix";
 import { Meta, Links, Scripts, useRouteData, LiveReload } from "remix";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 import stylesUrl from "./styles/global.css";
 
@@ -37,6 +37,7 @@ export default function App() {
     <Document>
       <Outlet />
       <footer>
+        <Link to="/page-2">go to page 2 (react-router-doms link)</Link>
         <p>This page was rendered at {data.date.toLocaleString()}</p>
       </footer>
     </Document>
